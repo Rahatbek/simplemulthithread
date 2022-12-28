@@ -19,20 +19,20 @@ public class Foo {
     public void second(Runnable r) {
         try {
             runSecond.acquire();
+            System.out.print("second");
+            runThird.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.print("second");
-        runThird.release();
     }
 
     public void third(Runnable r) {
         try {
             runThird.acquire();
+            System.out.print("third");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.print("third");
     }
 
 
