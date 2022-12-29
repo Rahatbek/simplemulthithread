@@ -1,6 +1,6 @@
-package com.rahatbek.foo;
+package com.rahatbek.foobyprimitive;
 
-public class RunnerA implements Runnable{
+public class RunnerA implements Runnable {
     private Foo f;
 
     public RunnerA(Foo f) {

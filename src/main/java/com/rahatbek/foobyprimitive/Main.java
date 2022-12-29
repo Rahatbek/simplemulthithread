@@ -1,4 +1,4 @@
-package com.rahatbek.foo;
+package com.rahatbek.foobyprimitive;
 
 public class Main {
     public static void main(String[] args) {
