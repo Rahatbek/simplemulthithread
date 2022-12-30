@@ -9,7 +9,7 @@ public class Foo {
         synchronized (this) {
             System.out.print("first");
             this.doneFirst = true;
-            notify();
+            notifyAll();
         }
     }
 
@@ -22,6 +22,7 @@ public class Foo {
                 }
             }
             System.out.print("second");
+            doneFirst = false;
             doneSecond = true;
             notify();
         }
@@ -36,6 +37,7 @@ public class Foo {
                 }
             }
             System.out.print("third ");
+            doneSecond = false;
         }
     }
 }
